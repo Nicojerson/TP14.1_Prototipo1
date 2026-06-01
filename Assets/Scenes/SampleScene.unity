@@ -465,6 +465,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Microscopio
       objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: 11690b31d6d379447a271503c9d13162, type: 3}
+      propertyPath: m_TagString
+      value: Coleccionable
+      objectReference: {fileID: 0}
     - target: {fileID: 400020, guid: 11690b31d6d379447a271503c9d13162, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.8
@@ -523,6 +527,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11690b31d6d379447a271503c9d13162, type: 3}
+--- !u!1 &253050869 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100020, guid: 11690b31d6d379447a271503c9d13162,
+    type: 3}
+  m_PrefabInstance: {fileID: 253050868}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &253050870
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253050869}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &253050871
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 253050869}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &302843067
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,6 +847,7 @@ GameObject:
   - component: {fileID: 723907371}
   - component: {fileID: 723907370}
   - component: {fileID: 723907369}
+  - component: {fileID: 723907372}
   m_Layer: 0
   m_Name: Collision_Area
   m_TagString: Untagged
@@ -837,7 +877,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723907367}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -887,6 +927,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723907367}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &723907372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 723907367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87499472be49aec46abf0fd967606445, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &833026895
 GameObject:
   m_ObjectHideFlags: 0
