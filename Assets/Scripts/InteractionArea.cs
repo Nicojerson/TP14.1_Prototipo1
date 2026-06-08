@@ -9,8 +9,15 @@ public class InteractionArea : MonoBehaviour
    
     void Start()
     {
-        uiManagerScript = GameObject.FindObjectOfType<UIManager>();
     }
+
+       void Awake(){
+        uiManagerScript = GameObject.FindObjectOfType<UIManager>();
+
+       }
+
+
+
         void OnTriggerEnter(Collider other)
     {
     if(other.CompareTag("Coleccionable")){
@@ -18,5 +25,11 @@ public class InteractionArea : MonoBehaviour
         contador = contador + 1;
         uiManagerScript.UpdateScore(contador);
     }
+    }
+    void Update(){
+        if(contador >= 3){
+            Time.timeScale = 0;
+            uiManagerScript.ActivarWin();
+        }
     }
 }

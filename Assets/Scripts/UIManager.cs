@@ -7,6 +7,15 @@ public class UIManager : MonoBehaviour
 {
     public TextMeshProUGUI textoPuntaje;
     public TextMeshProUGUI textoTemporizador;
+    public GameObject emptyGameOver;
+    public GameObject emptyWin;
+
+    public void ActivarGameOver(){
+        emptyGameOver.gameObject.SetActive(true);
+    }
+     public void ActivarWin(){
+        emptyWin.gameObject.SetActive(true);
+    }
 
     public void UpdateScore(int puntos)
     {
@@ -24,4 +33,5 @@ public class UIManager : MonoBehaviour
     {
         UpdateTimer();
     }
+    
 }
