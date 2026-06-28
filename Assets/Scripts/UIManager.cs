@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI textoTemporizador;
     public GameObject emptyGameOver;
     public GameObject emptyWin;
+    
 
     public void ActivarGameOver(){
         emptyGameOver.gameObject.SetActive(true);
