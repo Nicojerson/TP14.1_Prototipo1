@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 {
     public TextMeshProUGUI textoPuntaje;
     public TextMeshProUGUI textoTemporizador;
+    public TextMeshProUGUI textoTitulo;
     public GameObject emptyGameOver;
     public GameObject emptyWin;
     
@@ -23,6 +24,13 @@ public class UIManager : MonoBehaviour
         textoPuntaje.text = "Puntaje: " + puntos;
     }
     
+     public void UpdateTitle()
+    {
+        if(GameManager.tiempoTranscurrido < 55){
+        textoTitulo.text = (" ");     
+        }
+    }
+
     public void UpdateTimer()
     {
         if(GameManager.tiempoTranscurrido < 0){
@@ -30,9 +38,16 @@ public class UIManager : MonoBehaviour
         }
         textoTemporizador.text = "Tiempo: " + Mathf.Ceil(GameManager.tiempoTranscurrido);
     }
+    void Start()
+    {
+        textoTitulo.text = ("Recolectá los 4 microscopios del laboratorio para ganar");     
+    }
+
+
      void Update()
     {
         UpdateTimer();
+        UpdateTitle();
     }
     
 }

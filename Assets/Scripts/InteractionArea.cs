@@ -27,7 +27,7 @@ public class InteractionArea : MonoBehaviour
     }
     }
     void Update(){
-        if(contador >= 3){
+        if(contador >= 4){
             Time.timeScale = 0;
             uiManagerScript.ActivarWin();
         }
