@@ -28,7 +28,7 @@ public class UIManager : MonoBehaviour
         if(GameManager.tiempoTranscurrido < 0){
             GameManager.tiempoTranscurrido = 0;
         }
-        textoTemporizador.text = "Temporizador: " + GameManager.tiempoTranscurrido;
+        textoTemporizador.text = "Tiempo: " + Mathf.Ceil(GameManager.tiempoTranscurrido);
     }
      void Update()
     {
